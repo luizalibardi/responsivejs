@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript tricks I learned & loved</title>
+	<meta name="description" content="Javascript tutorials">
+	<meta name="keywords" content="HTML,CSS,JavaScript,JQuery">
+	<meta name="author" content="Luiza Libardi">
+	<meta name="viewport" content="width=device-width">
+	<link href="css/reset.css"  rel="stylesheet">
+	<link href="css/style.css"  rel="stylesheet">
+	<link href="css/response.css"  rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Crete+Round|Open+Sans:400' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+<div id="container">
+	<div id="menu">
+		<header>
+			<h1><span class="colorize">Javascript</span> tricks I learned & loved</h1>
+		</header>
+		<nav>
+			<ol>
+				<a href="#"><li id="curent">Toggling elements</li></a>
+				<a href="smooth-scrolling.html"><li>Smooth scrolling</li></a>
+				<a href="drag-drop.html"><li>Drag and drop</li></a>
+			</ol>
+		</nav>
+		<div class="sm-twitter landscape">
+			<p><a href="http://twitter.com/luizalibardi" target="_new">Follow me on twitter <i class="icon-twitter"></i></a></p>
+		</div>
+	</div>
+	<div id="tutorial">
+        <article id="first">
+			<h1>Toggling elements visibility</h1>
+			<p>One piece of javascript code that I find useful is a function that toggles the visibility of an element. So when you click on an element it show and/or hides a specific element on the page. There are several ways of doing this with Javascript. Bellow are two them.</p>
+			<h2>jQuery hide() and show()</h2>
+			<p>With jQuery, you can hide and show HTML elements with the hide() and show() methods:</p>
+			<div class="displayjs">
+				<div class="hideshow">Content to hide</div>
+				<button id="hide">Click to hide</button>
+				<button id="show">Click to show</button>
+			</div>
+
+
+            <p>And here is the code:</p>
+<pre class="prettyprint">
+ $("#hide").click(function(){
+  $("p").hide();
+ });
+ 
+ $("#show").click(function(){
+  $("p").show();
+ });</pre>
+
+
+ 		
+  <p>You can also specify the speed of the hiding/showing by adding the optional speed parameter. The following example demonstrates the speed parameter with hide():</p>
+  
+<div class="displayjs">
+				<div class="hideshowspeed">Content to hide</div>
+				<button id="hidespeed">Click to hide</button>
+				<button id="showspeed">Click to show</button>
+			</div>
+
+
+  <p>The speed can take the following values: "slow", "fast", or milliseconds. In the example bellow I used 1000 milliseconds.</p>
+  <pre class="prettyprint">
+ $("button").click(function(){
+  $("p").hide(1000);
+ });</pre>
+
+<h2>jQuery toggle()</h2>
+<p>With jQuery, you can toggle between the hide() and show() methods with the toggle() method.</p>
+<p>Shown elements are hidden and hidden elements are shown with the same button:</p>
+
+<div class="displayjs">
+				<div class="togglecontent">Content to hide</div>
+				<button id="togglebt">Click to toggle</button>
+			</div>
+<p>Bellow is the function for that. Notice that toggle() also accepts the speed parameter.</p>
+<pre class="prettyprint">
+ $("button").click(function(){
+  $("p").toggle();
+ });</pre>
+ <hr />
+ <p>Reference: <a class="colorize" href="http://www.w3schools.com/jquery/jquery_hide_show.asp" target="new">w3schools</a></p>
+		</article>       
+	</div>
+	<footer class="portrait">
+    <p class="back-top portrait"><a href="#curent" class="smoothScroll">&#8593; Back to top</a></p>
+    <p class="sm-twitter portrait"><a href="http://twitter.com/luizalibardi" target="_new">Follow me on <i class="icon-twitter"></i></a></p>
+	</footer>
+</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link href="css/hemisu-dark.css" type="text/css" rel="stylesheet" />
+	<script src="scripts/google-code-prettify/run_prettify.js"></script>
+	<script src="scripts/toggling-elements.js"></script>
+	<script type="text/javascript" src="scripts/smoothscroll.js"></script>
+</body>
+</html>

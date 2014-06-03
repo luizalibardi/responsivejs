@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript tricks I learned & loved</title>
+	<meta name="description" content="Javascript tutorials">
+	<meta name="keywords" content="HTML,CSS,JavaScript,JQuery">
+	<meta name="author" content="Luiza Libardi">
+	<meta name="viewport" content="width=device-width">
+	<link href="css/reset.css"  rel="stylesheet">
+	<link href="css/style.css"  rel="stylesheet">
+	<link href="css/response.css"  rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Crete+Round|Open+Sans:400' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+<div id="container">
+	<div id="menu">
+		<header>
+			<h1><span class="colorize">Javascript</span> tricks I learned & loved</h1>
+		</header>
+		<nav>
+			<ol>
+				<a href="index.html"><li>Toggling elements</li></a>
+				<a href="#"><li id="curent">Smooth scrolling</li></a>
+				<a href="drag-drop.html"><li>Drag and drop</li></a>
+			</ol>
+		</nav>
+		<div class="sm-twitter landscape">
+			<p><a href="http://twitter.com/luizalibardi" target="_new">Follow me on twitter <i class="icon-twitter"></i></a></p>
+		</div>
+	</div>
+	<div id="tutorial">
+        <article id="first">
+			<h1>Smooth Scrolling Effect</h1>
+			<p>Single-page websites are becoming a trend among web designers, both for their own projects and for client sites. There are a lot of cases out there in which a single-page site makes a lot of sense: if there is not a lot of content; if the content is all closely related; or in cases where a particular stylistic element works best on a single page.</p>
+			<p>In many cases, this arrangement represents the relationship between different sections of information and ideas better than the traditional multi-page model. You've likely seen it while browsing the web.</p>
+			<p>To provide navigation from section to section on this type of longer page, links are used – just as with the more traditional pages. The difference is that links do not direct from one page to another; instead, they link to different points on the single page.</p>
+			<h2>Linking to specific points on a page</h2>
+			<p>When we want to link to a specific point on a page, the standard tool that HTML used to provide was a named anchor. At the destination point (e.g. a Contact form at the bottom of the page), we add the name attribute and a value to the anchor tag at the start of the section. This was a good way to target a place in the page, but it only worked with anchor tags. With HTLM5 the same thing can be done with the id attribute, that can be added to any tag, like a div tag:</p>
+
+<pre class="prettyprint">
+   &lt;div id="contact"&gt;Here goes the content&lt;/div&gt; 
+</pre>
+
+			<p>To link to this point (e.g. from the top of the page), we link using the hash character (#) and the name of the destination id:</p>
+<pre class="prettyprint">
+   &lt;a href="#contact"&gt;Go To Contact Form&lt;/a&gt; 
+</pre>
+
+<p>Now let's add some smooth scrolling like the one seen in <a href="smooth-scrolling-demo.html" target="new" class="colorize">this example</a> in three easy steps.</p>
+
+<h2>First: update you links</h2>
+<p>First, identify each of the anchor links in your page that you want to use smooth scrolling. On each link, add the smoothScroll class like this:</p>
+			
+<pre class="prettyprint">
+   &lt;a href="#contact" class="smoothScroll"&gt;Go To Contact Form&lt;/a&gt; 
+</pre>
+
+<h2>Second: Get the Scripts</h2>
+<p>Download this <a href="http://cdn1.dwuser.com/Education/SmoothScroll/smoothscroll.js.zip" class="colorize" target="new">.zip</a> file and unzip it. Add the tiny smoothscroll.js file to your site's scripts folder.</p>
+
+<h2>Last: Add The Scripts To Your Page</h2>
+
+	<p>Now, it's time to add the script to your page. The script requires jQuery, so you'll need to add it as well. Add the following before the closing &lt;/body&gt; tag: </p>
+	<pre class="prettyprint">
+ &lt;script src="http://code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;
+ &lt;script src="yourfolder/smoothscroll.js"&gt;&lt;/script&gt;</pre>
+
+
+
+
+
+
+
+ <hr />
+ <p>Reference: <a class="colorize" href="http://www.dwuser.com/education/content/quick-guide-adding-smooth-scrolling-to-your-webpages/" target="new">DWUser</a></p>
+		</article>       
+	</div>
+	<footer class="portrait">
+    <p class="back-top portrait"><a href="#curent" class="smoothScroll">&#8593; Back to top</a></p>
+    <p class="sm-twitter portrait"><a href="http://twitter.com/luizalibardi" target="_new">Follow me on <i class="icon-twitter"></i></a></p>
+	</footer>
+</div>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<link href="css/hemisu-dark.css" type="text/css" rel="stylesheet" />
+	<script src="scripts/google-code-prettify/run_prettify.js"></script>
+	<script type="text/javascript" src="scripts/smoothscroll.js"></script>
+</body>
+</html>
